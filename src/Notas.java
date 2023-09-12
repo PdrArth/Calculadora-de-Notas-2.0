@@ -1,10 +1,9 @@
 import javax.swing.*;
+import java.util.Scanner;
 
 public class Notas {
-    int nota1 = 0;
-    int nota2 = 0;
-    int nota3 = 0;
-    int nota4 = 0;
+    Scanner ler = new Scanner(System.in);
+
     final double aprovado = 59.95;
     final double recuperacao = 59.94;
     final double reprovado = 29.94;
@@ -17,75 +16,27 @@ public class Notas {
         String computado = " ";
         JOptionPane.showMessageDialog(null, "AVISO. So aceitamos notas maiores que 0 e menores  do que 20", "Erro", JOptionPane.ERROR_MESSAGE);
 
-        while (true) {
-            nota1 = Integer.parseInt(JOptionPane.showInputDialog("Digite sua primeira nota"));
-            if (nota1 >= 0 && nota1 <= 20) {
-                String valido = String.format("Nota computada");
-                break;
-            } else if (nota1 < 0) {
-                String mensagem = String.format("Nota abaixo do valor do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            } else if (nota1 > 20) {
-                String mensagem = String.format("Nota acima do limite do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            }
+        for(int i = 1; i<=4 ; i++) {
+            int nota;
 
-        }
-        computado = String.format("nota computada");
-        JOptionPane.showMessageDialog(null, computado
-        );
-        while (true) {
-            nota2 = Integer.parseInt(JOptionPane.showInputDialog("Digite sua segunda nota"));
-            if (nota2 >= 0 && nota2 <= 20) {
-                String valido = String.format("Nota computada");
-                break;
-            } else if (nota2 < 0) {
-                String mensagem = String.format("Nota abaixo do valor do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            } else if (nota2 > 20) {
-                String mensagem = String.format("Nota acima do limite do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            }
-        }
-        computado = String.format("nota computada");
-        JOptionPane.showMessageDialog(null, computado);
-        while (true) {
-            nota3 = Integer.parseInt(JOptionPane.showInputDialog("Digite sua terceira nota"));
-            if (nota3 >= 0 && nota3 <= 20) {
-                String valido = String.format("Nota computada");
-                break;
-            } else if (nota3 < 0) {
-                String mensagem = String.format("Nota abaixo do valor do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            } else if (nota3 > 20) {
-                String mensagem = String.format("Nota acima do limite do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            }
-        }
-        computado = String.format("nota computada");
-        JOptionPane.showMessageDialog(null, computado);
-        while (true) {
-            nota4 = Integer.parseInt(JOptionPane.showInputDialog("Digite sua quarta nota"));
-            if (nota4 >= 0 && nota4 <= 20) {
-                String valido = String.format("Nota computada");
-                break;
-            } else if (nota4 < 0) {
-                String mensagem = String.format("Nota abaixo do valor do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            } else if (nota4 > 20) {
-                String mensagem = String.format("Nota acima do limite do semestre.\nDigite novamente");
-                JOptionPane.showMessageDialog(null, mensagem);
-            }
-        }
-        computado = String.format("nota computada");
-        JOptionPane.showMessageDialog(null, computado
-        );
+            while (true) {
+                nota = Integer.parseInt(JOptionPane.showInputDialog("Digite sua nota " + i + ":"));
+                if (nota < 0 || nota > 20) {
 
+                    JOptionPane.showMessageDialog(null, "Nota fora do intervalo de (a a 20). Tente novamente.");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null,"Nota computada");
+                break;
+                }
 
+                soma += nota;
+
+            }
+        }
     }
 
     public void soma() {
-        soma = nota1 + nota2 + nota3 + nota4;
         String somas = String.format("Sua nota eh %d ", soma);
         JOptionPane.showMessageDialog(null, somas);
     }
