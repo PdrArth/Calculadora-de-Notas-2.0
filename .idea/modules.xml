@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Calculadora-de-Notas.iml" filepath="$PROJECT_DIR$/Calculadora-de-Notas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculadora de Notas em Java/Calculadora de Notas em Java.iml" filepath="$PROJECT_DIR$/Calculadora de Notas em Java/Calculadora de Notas em Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculadora de Notas em Kotlin/Calculadora de Notas em Kotlin.iml" filepath="$PROJECT_DIR$/Calculadora de Notas em Kotlin/Calculadora de Notas em Kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Calculadora-de-Notas.iml" filepath="$PROJECT_DIR$/.idea/Calculadora-de-Notas.iml" />
     </modules>
   </component>
 </project>
